@@ -3,8 +3,14 @@
   "version": "0.15.0",
   "description": "gRPC-Web client for browsers (JS/TS)",
   "main": "dist/grpc-web-client.js",
+  "module": "dist/grpc-web-client.mjs",
   "browser": "dist/grpc-web-client.umd.js",
   "types": "dist/typings/index.d.ts",
+  "exports": {
+    "require": "./dist/grpc-web-client.js",
+    "import": "./dist/grpc-web-client.mjs",
+    "default": "./dist/grpc-web-client.umd.js"
+  },
   "scripts": {
     "clean": "rm -rf dist",
     "postbootstrap": "npm run lib:build",
